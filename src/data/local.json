@@ -1,0 +1,25 @@
+{
+    "firstname": "Aziz",
+    "lastName": "Sharipov",
+    "bio": "I'm an experienced web developer and an aspiring designer. My expertise mostly lies in front-end, but I also posses a great interest for back-end. In my spare time I'm engaged in learning languages, exercising or solving problems. Let's talk!",
+    "bioIcon": "👨🏻‍💻",
+    "socials": [
+        {
+            "title": "github", 
+            "link": "https://github.com/azziko"
+        },
+        {
+            "title": "linkedIn", 
+            "link": "https://www.linkedin.com/in/aziz-sharipov-301b33260"
+        },
+        {
+            "title": "stackoverflow", 
+            "link": "https://stackoverflow.com/users/20127201/aziz-sharipov"
+        },
+        {
+            "title": "telegram", 
+            "link": "https://t.me/shariplov"
+        }
+    ],
+    "gitProfileName": "azziko"
+}

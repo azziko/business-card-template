@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-variant-numeric: tabular-nums;
+}
+
+@layer base {
+    html::-webkit-scrollbar {
+        @apply hidden
+    }
+    
+    html {
+        -ms-overflow-style: none; 
+        scrollbar-width: none;  
+    }
+    
+    body {
+        @apply overflow-x-hidden h-screen w-screen
+    }
+    
+    button, input[type="submit"], input[type="reset"] {
+        @apply bg-none text-inherit p-0 border-none cursor-pointer outline-inherit
+    }
+
+    a {
+        @apply no-underline cursor-pointer
+    }
+
+    p {
+        @apply leading-6 font-ptSans
+    }
+
+    h1 {
+        @apply font-openSans font-bold text-8xl
+    }
+}
+
+@layer components {
+    .root, .wrapper {
+        @apply w-full h-full
+    }
+
+    .wrapper {
+        @apply bg-white
+    }
+
+    .button {
+        @apply flex items-center justify-center py-2 px-5 max-w-max
+        border-solid border-[3px] rounded-xl border-jet 
+        font-openSans font-bold text-lg tracking-wide text-jet
+        transition duration-150 ease-in-out hover:bg-jet hover:text-white
+
+        dark:border-white dark:text-white dark:hover:bg-white dark:hover:text-jet
+    }
+
+    .button-icon {
+        @apply button py-2 pl-3 pr-5 gap-2
+    }
+
+    .social {
+        @apply font-bold text-base border-b-2 border-jet border-solid dark:border-white
+    }
+
+    .name {
+        @apply relative 
+        before:content-[''] before:block before:h-[10px] before:rounded-full before:w-20 before:absolute 
+        before:top-1/2 before:transform before:translate-x-[-5px] before:-translate-y-1/2 before:bg-jet dark:before:bg-white
+        capitalize select-none
+    }
+
+    .body {
+        @apply grid grid-cols-12 gap-x-5 w-full
+    }
+}
