@@ -20,7 +20,11 @@
     }
     
     body {
-        @apply overflow-x-hidden h-screen w-screen
+        @apply overflow-x-hidden h-screen w-screen bg-white
+    }
+
+    body.dark {
+        @apply bg-jet
     }
     
     button, input[type="submit"], input[type="reset"] {
@@ -36,17 +40,17 @@
     }
 
     h1 {
-        @apply font-openSans font-bold text-8xl
+        @apply font-openSans font-bold text-7xl sm:text-8xl
     }
 }
 
 @layer components {
-    .root, .wrapper {
-        @apply w-full h-full
+    .root {
+        @apply w-screen h-screen
     }
 
-    .wrapper {
-        @apply bg-white
+    .container {
+        @apply xl:max-w-[1600px] xl:px-20 lg:px-10 sm:px-12 md:px-20 sm:max-w-full
     }
 
     .button {
@@ -69,11 +73,12 @@
     .name {
         @apply relative 
         before:content-[''] before:block before:h-[10px] before:rounded-full before:w-20 before:absolute 
-        before:top-1/2 before:transform before:translate-x-[-5px] before:-translate-y-1/2 before:bg-jet dark:before:bg-white
+        before:top-1/2 before:transform sm:before:translate-x-[-5px] before:left-1/2 sm:before:left-0 before:-translate-x-1/2 before:-translate-y-1/2 before:bg-jet dark:before:bg-white
         capitalize select-none
+        text-center sm:text-left
     }
 
     .body {
-        @apply grid grid-cols-12 gap-x-5 w-full
+        @apply grid md:grid-cols-8 lg:grid-cols-12 gap-x-5 w-full gap-y-20
     }
 }

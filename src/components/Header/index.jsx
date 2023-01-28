@@ -10,7 +10,7 @@ export default function Header() {
     const {theme, handleClick} = useContext(ThemeContext)
 
     return (
-        <header className='flex h-16 items-center'>
+        <header className='flex min-h-[4rem] items-center'>
             <FontAwesomeIcon onClick={() => handleClick()} className='text-[32px] text-jet dark:text-white cursor-pointer' 
             icon=
             {theme == 'dark' 
